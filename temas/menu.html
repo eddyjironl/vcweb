@@ -1,0 +1,146 @@
+<html>
+	<header>
+		<style>
+			*{
+			margin: 0;
+			padding: 0;
+			}
+			header{
+				font-family: Helvetica;
+				//width: 480px;
+				width:900px;
+				margin: 0 auto;
+			}
+			ul{
+				list-style: none;
+			}
+			
+			#menu li>a{
+				box-shadow:blue 5px 5px 15px;
+				background-color: #eaeaea;
+				color: black;
+				padding: 10px;
+				display: block;
+				text-decoration: none;
+				min-width: 100px;
+			}
+			
+			#menu li>a:hover{
+				color: white;
+				background-color: blue;
+			}
+			#menu>li{
+				float: left;
+				text-align:center
+			}
+			#menu>li>ul{
+				display: none;
+			}
+			
+			#menu li:hover ul {
+				display:block;
+			}
+			#menu{
+					box-shadow:rgba(26,149,29,1) 5px 5px 10px;
+
+			}
+			
+			
+		</style>	
+		<script>
+			function init(){
+				var ocon0001 = document.getElementById("con0001");
+				ocon0001.addEventListener("click",accion_con0001,true);
+			}
+			
+			function accion_con0001(){
+				alert("preciono en modulos");
+			}
+			window.onload=init;
+		</script>
+	
+	</header>
+  <body>
+	
+	
+	<ul id="menu">
+		<li><a href="" >Configuraciom</a>
+			<ul>
+				<li><a id="con0001"> modulos</a></li>
+			</ul>
+		</li>
+		<li><a href="" >Transaccions</a>
+			<ul>
+				<li><a href=""> Facturacion</a></li>
+			</ul>
+		</li>
+		<li><a href="" >Reportes</a>
+			<ul>
+				<li><a href=""> modulos</a></li>
+			</ul>
+		</li>
+		<li><a href="" >Mantenimiento</a></li>
+		<li><a href="" >Configuracion</a></li>
+	</ul>
+	
+  
+
+  <!--   <header>
+      <nav>
+        <ul id="menu">
+          <li><a href="">Configuracion</a>
+            <ul>
+              <li><a href="">Modulos</a>
+								<ul>
+									<li><a href="">Facturacion y Cuentas por Cobrar</a></li>
+									<li><a href="">Modulo de Inventarios</a></li>
+									<li><a href="">Contabilidad</a></li>
+								</ul>  
+							</li>
+              <li><a href="">Cambio de Usuario</a></li>
+              <li><a href="">Cambio de Empresa</a></li>
+            </ul>  
+					</li>
+          <li><a href="">Transacciones</a>
+            <ul>
+              <li><a href="">Facturacion y Notas de Debito</a></li>
+              <li><a href="">Recibos de Dinero</a></li>
+              <li><a href="">Cotizaciones</a></li>
+            </ul>  
+					</li>
+          <li><a href="">Reportes</a>
+            <ul>
+              <li><a href="">Lista de Precios</a></li>
+              <li><a href="">Resumen de Ventas</a></li>
+              <li><a href="">Resumen de Cobros</a></li>
+              <li><a href="">Cuentas Por Cobrar</a></li>
+              <li><a href="">Estado de cuentas</a></li>
+            </ul>  
+          </li>
+          <li><a href="">Catalogos</a>
+            <ul>
+              <li><a href="">Clientes</a></li>
+              <li><a href="">Productos</a></li>
+              <li><a href="">Tipos de Productos</a></li>
+              <li><a href="">Proveedores</a></li>
+              <li><a href="">Bodegas</a></li>
+              <li><a href="">Condiciones de Pago</a></li>
+              <li><a href="">Categorias Varias</a></li>
+            </ul>  
+					</li>
+          <li><a href="">Modulo</a></li>
+        </ul>
+      </nav>
+    </header>
+	 -->	
+			<script>
+				var oFormCustno = document.getElementById("arcust");
+				oFormCustno.addEventListener("click",function(){
+					alert("Dio click en clientes");
+				},false);
+				
+			
+			
+		</script>
+  </body>
+</html>

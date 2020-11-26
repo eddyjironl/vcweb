@@ -1,0 +1,111 @@
+*{
+	font-size:12px;
+	font-family:arial;
+	margin: 0;
+	padding: 0;
+}
+.fieldset_scren{
+	padding:0px;
+	display:inline-block;
+	float:left;
+	border:none;
+}
+#area_menu{
+	margin-top:26px;
+	margin-left:5px;
+	display:inline-block;
+	position:fixed;
+}
+#system_name{
+	font-family:bold arial;
+	font-size:22px;
+	margin-left:500px;
+	width:400px;
+	color:blue;
+	text-shadow:black 3px 3px 7px;
+}
+#cia_desc{
+	padding-left:5px;
+	padding-right:5px;
+	margin-bottom:1px;
+	border:solid 1px rgb(240,240,240);
+	background-color:gray;
+ 	width:auto;
+	color:cyan;
+	display: inline-block;	
+	min-width:215px;
+}
+#labels{
+	position:fixed;
+	//background:blue;
+	margin-left:5px;
+}
+#ventana{
+	border:1px solid red;
+	width: -webkit-fill-available;
+	height: -webkit-fill-available; 
+	border:none;
+	top:120px;
+	left:40px;
+	position:fixed;
+}
+#fondo{
+   width:48%;
+   margin-top:15%;
+   margin-left:20%; 
+   animation:fadein 500ms;
+}
+#barra_screen{
+	position:fixed;
+	width:95%;
+	left:40px;
+	height:fit-content;
+	padding:5px;
+	background-color:rgb(240,240,240);
+	box-shadow:black 0px 5px 10px;
+	border-radius:5px 5px 50px 50px;
+}
+#logo{
+	margin-top:5px;
+	margin-left:35px;
+
+}
+
+/*
+-----------------------------------------------------------------------------------------------------
+CONFIGURACION DEL MenuText
+-----------------------------------------------------------------------------------------------------
+*/
+header{
+	font-family: Helvetica;
+	width:900px;
+	margin: 0 auto;
+}
+ul{
+	list-style: none;
+	color:green;
+
+}
+#menu li>a{
+	background-color: #eaeaea;
+	color: black;
+	padding: 5px;
+	display: block;
+	text-decoration: none;
+	min-width: 100px;
+}
+#menu li a:hover{
+	color: yellow;
+	background-color: blue;
+}
+#menu>li{
+	float: left;
+	text-align:center;
+}
+#menu>li>ul{
+	display: none;
+}
+#menu li:hover ul {
+	display:block;
+}
+			

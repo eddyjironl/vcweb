@@ -1,0 +1,247 @@
+<html>
+	<head>
+		<title>Registro de Clientes</title>
+		
+		
+	<style>
+			#arcust{
+				#border:solid 1px black;
+				width:300px;
+				padding:10px;
+				background-color:rgba(202,202,202,1);
+				box-shadow:grey 7px 7px 10px;
+			}
+			
+			h1{
+				text-align:center;
+			}
+			
+			.lbbase{
+				background-color:orange;
+				color:white;
+			}
+	</style>
+		
+	<style>
+
+			#vmenu{
+				border:solid 2px gray;
+				background-color:rgba(202,202,202,1);
+				width:800px;	
+				height:500px; //auto;
+				top:10%;
+				left:20%;
+				position:fixed;
+				box-shadow:gray 5px 5px 5px;
+			}
+			
+			#vheader{
+				border:solid 1px black;
+				height:100px;
+			}
+			
+			#vfooter{
+				border:solid 2px gray;
+				height:70px;
+			}
+			
+			#vlista{
+				border:solid 1px red;
+				height:200px; //319px;
+				width:99%;
+				left:2px;
+				position:relative;
+				margin:auto;
+				overflow: auto;
+			}
+		</style>
+
+	<style>
+		.ckey{
+			width:70px;
+			text-align:left;
+		}
+		.cdesc{
+			width:100px;
+			text-align:left;
+		}
+
+	</style>
+
+	<script>
+			
+			//var cliente= document.getParameterByName('cliente');
+			
+		function init(){
+				var oBtcustno = document.getElementById("btcustno");
+				var oBtnueva  = document.getElementById("btnueva");
+				oBtcustno.addEventListener("click",getmenulist,false);
+				oBtnueva.addEventListener("click",clear_view,false);
+				
+			}
+		
+			function getmenulist(pcmenuid){
+				var menuid  = pcmenuid.target.id;
+				var oMenu   = document.getElementById("vmenu");
+				var oLista  = document.getElementById("vlista");
+				
+				//var oRequest = new XMLHttpRequest();
+				//oRequest.open("GET","menu_arcust.php",false);
+				//oRequest.send();
+				var oRequest = new XMLHttpRequest();
+				// Creando objeto para empaquetado de datos.
+				var oDatos   = new FormData();
+				// adicionando datos en formato CLAVE/VALOR en el objeto datos para enviar como parametro a la consulta AJAX
+				oDatos.append("idmenu",menuid);
+				//var oIdMenu  = {"idmenu":menuid};
+				// obteniendo el menu
+				oRequest.open("POST","lista_menu.php",false); 
+				oRequest.send(oDatos);
+				// desplegando pantalla de menu con su informacion.
+				oMenu.style.display = "block";
+				put_table_header();
+				oLista.innerHTML = oRequest.responseText;
+			}
+			
+			function put_table_header(pcmenu){
+				if(pcmenu=="btcustno"){
+				
+				}
+			}
+			
+			function cerrar(){
+				document.getElementById("vmenu").style.display = "none";
+			}
+		
+			function get_vmenu(){
+				var ventana_menu = "";
+				ventana_menu  = "<div id='vmenu'>";
+				ventana_menu += "<div id='vheader'></div>";
+				ventana_menu += "<div id='vlista'></div>";
+				ventana_menu += "<div id='vfooter'>";
+				ventana_menu += "	<input type='button' value='salir' id='btcerrar'>";
+				ventana_menu += "</div>";
+				ventana_menu += "</div>";
+				document.write(ventana_menu);
+				// poniendo a la escucha el boton de cierre.
+				var oMenu   = document.getElementById("vmenu");
+				var bcerrar = document.getElementById("btcerrar");
+				bcerrar.addEventListener("click",cerrar,false);
+				oMenu.style.display="none";
+			}	
+			
+			function refres_window(pckeyid,pcmenuid){
+				cerrar();
+				update_window(pckeyid,pcmenuid);
+			}
+			
+			function update_window(pckeyid,pcmenuid){
+			// --------------------------------------------------------------------------------------
+			// Con esta funcion se hace una peticion al servidor para obtener un JSON, con los 
+			// datos de la persona un solo objeto json que sera el cliente.
+			// --------------------------------------------------------------------------------------
+				var oRequest = new XMLHttpRequest();
+				// Creando objeto para empaquetado de datos.
+				var oDatos   = new FormData();
+				// adicionando datos en formato CLAVE/VALOR en el objeto datos para enviar como parametro a la consulta AJAX
+				oDatos.append("ccustno",pckeyid);
+				oDatos.append("idmenu",pcmenuid);
+				// obteniendo el menu
+				oRequest.open("POST","lista_menu.php",false); 
+				oRequest.send(oDatos);
+				// desplegando pantalla de menu con su informacion.
+				var persona = JSON.parse(oRequest.response);
+				//cargando los valores de la pantalla.
+				document.getElementById("ccustno").value = persona.ccustno;
+				document.getElementById("cname").value = persona.cname;
+				document.getElementById("nlimcrd").value = persona.nlimcrd;
+				document.getElementById("cpasword").value = persona.cpasword;
+				document.getElementById("mnotas").value = persona.mnotas;
+				document.getElementById("ctel").value = persona.ctel;
+				/*
+				// leyendo el json.
+				var json = '';
+				for (var i=0; i<=persona.length; i++){
+						json += persona.charAt(i);
+				}
+				*/
+			}
+			// poniendo en blanco la pantalla
+			function clear_view(){
+				// esto se puede hacer con queryselectorall()
+				document.getElementById("ccustno").value = "";
+				document.getElementById("cname").value = "";
+				document.getElementById("nlimcrd").value = "";
+				document.getElementById("cpasword").value = "";
+				document.getElementById("mnotas").value = "";
+				document.getElementById("ctel").value = "";
+			}
+			
+			window.onload=init;
+	</script>
+		
+		<style>
+			/* 
+			  ---------------------------------------------------------
+			  Estilo de botones pequeños para la busqueda del menu
+			  ---------------------------------------------------------
+			*/
+
+			.btmenu{
+				box-shadow:gray 4px 4px 10px;
+				width:20px;
+				height:20px;
+				src:"buscar.bmp";
+			}
+			
+			.btmenu:hover{
+				box-shadow:yellow 5px 5px 10px;
+				border-right:solid 2px yellow;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<section id="zona_arcust">
+			<form	id="arcust" method="post" action="">
+				<h1>MODULO DE CLIENTES</h1>
+				<table id="arcust_infor">
+					<tr>
+						<td class="lbbase"><label>Codigo Cliente</label> </td>
+						<td>
+							<input type="text" id="ccustno" size="10px" name="ccustno" required placeholder="indique un codigo alfanumerico" >
+							<img id="btcustno" name="btcustno" src="buscar.bmp" title="Listado de Clientes" class="btmenu" alt="x"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="lbbase"><label>Nombre Cliente </label></td>
+						<td><input type="text" id="cname"  class="input" name="cname" required placeholder="Indique nombre completo"></td>
+					</tr>
+					<tr>
+						<td class="lbbase"><label>Limite Credito</label></td>
+						<td><input type="number" id="nlimcrd" size="10px" name="nlimcrd" required></td>
+					</tr>
+					<tr>
+						<td class="lbbase">Pasword </td>
+						<td><input type="text" id="cpasword" name="cpasword" required></td>
+					</tr>
+					<tr>
+						<td class="lbbase"><label>Telefono </label></td>
+						<td><input type="text" id="ctel" name="ctel" required></td>
+					</tr>
+					<tr>
+						<td class="lbbase"><label>Comentarios </label></td>
+						<td><textarea id="mnotas" name="mnotas"></textarea></td>
+					</tr>
+				</table>
+				<br><br>
+				<input type="submit" value="Guardar">
+				<input type="button" id="btnueva" name="btnueva" value="Nueva">
+				
+			</form>
+		</section>
+		<!-- Presentacion del menu -->
+		<script>get_vmenu();</script>
+	</body>
+</html>

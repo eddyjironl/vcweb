@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<script>
+		function get_btprinc(pcboton_name,pcid){
+	// si el ID esta vacio entonces coloca el nombre del boton por el tipo de boton
+	var lcid = "";
+	if (pcid == ""){
+		lcid = pcboton_name;
+	}else{
+		lcid = pcid;
+	}
+	
+	var lcbt  = '<button class="btbarra" ';
+		lcbt +=	'style="width:60px; height:60px" ';
+		lcbt +=	'type="button" ';
+	// boton de guardar		
+	if(pcboton_name == "btsave"){
+			lcbt +=	'name="' + lcid + '" id="' + lcid + '" ';
+			lcbt +=	'title="Guarda la informacion de la pantalla" ';
+			lcbt +=	'accesskey="g"> ';
+			lcbt +=	'<img style="width:30px; height:30px" src="../photos/save.ico" alt="x" /> '
+			lcbt +=	'<br>Guardar ';
+	}
+	// boton new para limpieza de formulario
+	if(pcboton_name == "btnew"){
+			lcbt +=	'name="' + lcid + '" id="' + lcid + '" ';
+			lcbt +=	'title="Limpia la pantalla para escribir nuevos registros" ';
+			lcbt +=	'accesskey="g"> ';
+			lcbt +=	'<img style="width:30px; height:30px" src="../photos/nueva.ico" alt="x" /> '
+			lcbt +=	'<br>Nueva ';
+	}		
+	// boton salir para cerrar algunos formularios.
+	if(pcboton_name == "btquit"){
+			lcbt +=	'name="' + lcid + '" id="' + lcid + '" ';
+			lcbt +=	'title="Cierra la pantalla" ';
+			lcbt +=	'accesskey="s"> ';
+			lcbt +=	'<img style="width:30px; height:30px" src="../photos/salir.ico" alt="x" /> '
+			lcbt +=	'<br>Salir ';
+	}							
+	// boton para borrar registros en la base de datos.
+	if(pcboton_name == "btdelete"){
+			lcbt +=	'name="' + lcid + '" id="' + lcid + '" ';
+			lcbt +=	'title="Elimina registros de la base de datos" ';
+			lcbt +=	'accesskey="d"> ';
+			lcbt +=	'<img style="width:30px; height:30px" src="../photos/e_borrar.gif" alt="x" /> '
+			lcbt +=	'<br>Borrar ';
+	}							
+
+	// cerrando la construccion del boton
+	lcbt +=	'</button>';
+  	// mostrando el boton 
+	document.write(lcbt);
+}
+		</script>
+		<style>
+		
+#vmenu{
+	border:solid 2px gray;
+	background-color:rgba(202,202,202,1);
+	width:800px;	
+	height:500px; //auto;
+	top:10%;
+	left:20%;
+	position:fixed;
+	box-shadow:gray 5px 5px 5px;
+}
+			
+#vheader{
+	border:solid 1px black;
+	height:100px;
+}
+			
+#vfooter{
+	border:solid 2px gray;
+	height:70px;
+}
+			
+#vlista{
+	border:solid 1px red;
+	height:200px; //319px;
+	width:99%;
+	left:2px;
+	position:relative;
+	margin:auto;
+	overflow: auto;
+}
+
+		
+		
+		</style>
+	</head>
+	<body>
+		<div id='vmenu'>
+			<div id='vheader'></div>
+			<div id='vlista'></div>
+			<div id='vfooter'>
+				<script>get_btprinc('btquit','btcerrar');</script>
+			</div>
+		</div>
+	</body>
+</html>
+

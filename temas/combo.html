@@ -1,0 +1,57 @@
+<html>
+
+<HEAD>
+<SCRIPT>
+	function lista(){
+		
+		/*
+		var lcselect =  '<select id="clase">';
+		lcselect += '<option value="">No definido</option>';
+		lcselect += '<option value="02">Pendejo</option>';
+		lcselect += '<option value="03">Cabron</option>';
+		lcselect += '</select>';
+		//alert(lcselect);
+		document.write(lcselect);
+		
+		
+		
+		Valor	Descripción
+			0	No inicializado (objeto creado, pero no se ha invocado el método open)
+			1	Cargando (objeto creado, pero no se ha invocado el método send)
+			2	Cargado (se ha invocado el método send, pero el servidor aún no ha respondido)
+			3	Interactivo (se han recibido algunos datos, aunque no se puede emplear la propiedad responseText)
+			4	Completo (se han recibido todos los datos de la respuesta del servidor)
+
+		*/
+		var oRequest = new XMLHttpRequest();
+		oRequest.open("GET","menu_arcust.php",false);
+		oRequest.send();
+		document.write(oRequest.responseText);
+		
+		
+//		alert(oRequest.readyState);	
+		//var msg = oRequest.responseText;
+
+  }
+</SCRIPT>
+
+</HEAD>
+
+
+<BODY>
+	<H2>Construyendo Lista </H2>
+	<script>lista();</script>
+
+	<script>
+		//var oselect = document.getElementById("clase");
+		//oselect.addEventListener("change",getvalue,false);	
+		
+		function getvalue(){
+			alert(oselect.value);
+		}
+
+	</script>
+
+</BODY>
+
+</html>

@@ -1,0 +1,132 @@
+#arinvc{
+	width:fit-content;
+	height:fit-content;
+	font-family:arial;
+	font-size:12px;	
+}
+/*-----------------------------------------------------------*/
+#pantalla_pago, #pantalla_actualiza_linea{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	//transition: opacity 400ms ease-in;
+}
+
+#fpago, #fupdfield{
+	border:solid 3px gray;
+	width:fit-content;
+	height:fit-content;
+	margin:5% 10%;
+}
+
+
+#div1, #div11{
+	background:green;
+	top:0px;
+	left:0px;
+	box-shadow:white 0px 10px 10px;
+	color:yellow;
+	text-align:center;
+	padding:1px;
+	margin-bottom:5px;
+	border-radius:10px 10px 0px 0px;
+}
+
+
+#set5 label, #set5 input{
+	font-size:26px;
+}
+
+
+#vuelto,#efectivo,#topay{
+	width:150px;
+}
+#set6 , #fbotones{
+    text-align:center;
+}
+
+thead, tbody{
+	font-size:12px;
+	font-family:arial;
+}
+#set51,#set52,#set53{
+	text-align:right;
+	min-width:150px;
+	display: inline-block;
+	width:auto;
+}
+#set52{
+	color:red;
+}
+#set53{
+	color:blue;
+}
+#efectivo{
+	background:rgb(255,159,64);
+}
+
+/*-----------------------------------------------------------*/
+#set2, #set3 {
+	display:inline-block;
+}
+
+
+
+
+
+#detalles{
+	border:solid 1px gray;
+}
+#mnotas{
+	float:right;
+	display:inline-block;
+}
+
+
+.sayamtd{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	color:blue;
+	background-color:rgb(240,240,240);
+	text-align:right;
+}
+
+.saytextd{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	color:blue;
+	background-color:rgb(240,240,240);
+	text-align:left;
+}
+
+.table_det{	
+	background-color:#dcdcdc;
+	color:#000000;
+}
+fieldset{
+	display:inline-block;
+	border:none;
+	//float:left;
+}
+#set1{
+	float:left;
+}
+
+#cservno1{
+	width:130px;
+}
+
+#adetalles{
+	//float:left;	
+	margin:auto 22px;
+	//border:solid 1px;
+	height:200px;	
+	overflow: auto;
+}
+
+#subtotal{
+	position:relative;
+	top:5px;
+}

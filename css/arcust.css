@@ -1,0 +1,84 @@
+#informacion_1,#informacion_2{
+	float:left;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* dibujando la subpantalla. */
+/*---------------------------------------------------------------------------------------------*/
+
+.area_bloqueo{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+#pantalla, #pantalla2{
+	border:solid 3px gray;
+	width:fit-content;
+	height:fit-content;
+	margin:5% 5%;
+}
+.barra_sencilla{
+	background:green;
+	top:0px;
+	left:0px;
+	box-shadow:white 0px 10px 10px;
+	color:yellow;
+	text-align:center;
+	padding:1px;
+	margin-bottom:5px;
+	border-radius:10px 10px 0px 0px;
+}
+#btopciones button{
+   font-size:12px;
+   padding:1px;
+}
+#btopciones{
+    text-align:center;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* detalle de la tabla*/
+/*---------------------------------------------------------------------------------------------*/
+
+#invoice_detail,#recibos_tabla{
+	height:200px;	
+	overflow: auto;
+}
+
+#adetalles{
+	height:300px;	
+	overflow: auto;
+	margin-bottom:15px;
+}
+
+.table_det{	
+	background-color:#dcdcdc;
+	color:#000000;
+	font-size:11px;
+	font-family:arial;
+}
+
+.sayamtd{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	color:blue;
+	background-color:rgb(240,240,240);
+	text-align:right;
+}
+
+.saytextd{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	color:blue;
+	background-color:rgb(240,240,240);
+	text-align:left;
+}
+.sayamtd_link{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	color:red;
+	background-color:rgb(240,240,240);
+	text-align:right;
+}

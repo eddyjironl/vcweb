@@ -1,0 +1,441 @@
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Estilos del View Menu 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.mx_area_bloqueo{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	//transition: opacity 400ms ease-in;
+}
+#form_menu{
+	margin:5% 10%;
+}
+.mx_barra_sencilla{
+    /* formato en verde.*/
+	background:green;
+	color:yellow;
+	box-shadow:white 0px 10px 10px;
+    
+    /* formato en blanco.*/
+	//background:rgb(240,240,240);
+	//color:black;
+	//box-shadow:black 0px 10px 10px;
+
+	top:0px;
+	left:0px;
+	padding:5px;
+	border-radius:10px 10px 0px 0px;
+}
+#mx_detalle tr:hover{
+	color:black;
+	box-shadow:cyan 0px 10px 10px;
+	background-color:orange;
+	cursor:hand;
+}
+#mx_detalle tr {
+	color:blue;
+	cursor:hand;
+}
+.mx_formato_datos{	
+	background-color:#dcdcdc;
+	color:#000000;
+	font-size:11px;
+	font-family:arial;
+}
+.mx_area_encabezado{
+	color:blue;
+	//overflow: auto;
+	margin:auto 10px;
+	//text-align:center;
+}
+.mx_area_detalles{
+	height:300px;	
+	color:blue;
+	overflow: auto;
+	margin:auto 10px;
+	//text-align:center;
+}
+
+/* definida como clase para hacer que los otros menus funcionen igual */
+
+.listados:hover{
+	color:black;
+	box-shadow:cyan 0px 10px 10px;
+	background-color:orange;
+	cursor:hand;
+}
+.listados{
+	color:blue;
+	cursor:hand;
+}
+
+/* 
+estilos del tabs 
+--------------------------------------------------------------------------------------
+*/
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  border-radius:10px 10px 10px 10px;
+}
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  transition: 0.3s;
+  font-size: 12px;
+  margin:5px;
+  border-right:solid 1px black;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+  box-shadow:black 5px 5px 9px;
+  border-right:solid 2px white;
+}
+/* Create an active/current tablink class */
+.tab button.active {
+	background-color: #ccc;
+ 	box-shadow:blue 5px 5px 10px;
+ 	color:blue;
+	border-right:solid 2px cyan;
+}
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+/* estilo de las etiquetas base*/
+input, select{
+	font-size:12px;
+}
+.listas{
+	border:solid 1px rgb(240,240,240);
+	font-size:12px;
+}
+.listas:hover{
+	background-color:cyan;
+}
+.ckey{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	display:inline-block;			
+	width:70px;
+	text-align:left;
+}
+.textcdesc{
+	padding:1px;
+	border:solid 1px rgb(2textcdesc40,240,240);
+	display:inline-block;	
+	width:250px;
+
+}
+.textkey{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	width:100px;
+	display:inline-block;	
+	placeholder:"10 letras Maximo";
+}
+.textkey_inactivo{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	width:100px;
+	display:inline-block;	
+	background-color:gray;
+	color: white;
+}
+
+
+.saykey{
+	padding:1px;
+	margin-bottom:3px;
+	border:solid 1px rgb(240,240,240);
+	width:100px;
+	display: inline-block;						
+	color:blue;
+	background-color:rgb(240,240,240);
+}
+.textnormal{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	width:200px;
+	display:inline-block;			
+}
+.textdate{
+	border:solid 1px rgb(240,240,240);
+	width:130px;
+	display:inline-block;			
+}
+.textqty{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	width:fit-content;
+	min-width:100px;
+	display:inline-block;
+	text-align:right;
+}
+.mnotas{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	display:inline-block;
+}
+.labeltitle{
+	padding-left:5px;
+	padding-right:5px;
+	margin-bottom:1px;
+	border:solid 1px rgb(240,240,240);
+	background-color:gray;
+ 	width:auto;
+	color:cyan;
+	display: inline-block;	
+	min-width:300px;
+}
+.labelnormal{
+	padding:1px;
+	margin-bottom:1px;
+	border:solid 1px rgb(240,240,240);
+	background-color:rgb(255,255,128);
+ 	width:auto;
+	color:black;
+ 	display: inline-block;	
+	min-width:150px;  
+}
+.labelsencilla{
+	padding:1px;
+	margin-bottom:3px;
+	margin-top:3px;
+	width:auto;
+	color:blue;
+ 	display: inline-block;	
+	min-width:150px;  
+}
+.labelfiltro{
+	text-align:right;
+	padding:1px;
+	margin-bottom:3px;
+	margin-top:3px;
+	width:auto;
+	color:black;
+ 	display: inline-block;	
+	min-width:100px;  
+}
+.saytext{
+	padding:1px;
+	margin-bottom:3px;
+	border:solid 1px rgb(240,240,240);
+	width:200px;
+	display: inline-block;						
+	color:blue;
+	background-color:rgb(240,240,240);
+}
+.sayamt{
+	padding:1px;
+	margin-bottom:3px;
+	border:solid 1px rgb(240,240,240);
+	width:100px;
+	display: inline-block;						
+	color:blue;
+	background-color:rgb(240,240,240);
+	text-align:right;
+}
+.lbbase{
+	background-color:rgb(255,255,128);
+	color:black;
+}
+/* estilo base para formulario*/
+/* buscando poner estilo responsive */
+.form2{
+	background-color:rgba(202,202,202,1);
+	box-shadow:grey 7px 7px 10px;
+	padding:2px;
+	border-radius:10px 10px 0px 0px;
+	width:fit-content;
+	height:fit-content;
+	font-family:arial;
+	font-size:12px;	
+	display:inline-block;
+}
+
+.fieldset{
+	display:inline-block;
+	border:none;
+	//float:left;
+}
+.form{
+	background-color:rgba(202,202,202,1);
+	box-shadow:grey 7px 7px 10px;
+	padding:2px;
+	padding-top:10px;
+}
+/* 
+---------------------------------------------------------------------------------------
+MENU DESPLEGABLE.
+---------------------------------------------------------------------------------------
+*/
+#vmenu{
+	border:solid 2px gray;
+	background-color:rgba(202,202,202,1);
+	width:800px;	
+	height:500px; 
+	top:10%;
+	left:5%;
+	position:fixed;
+	box-shadow:gray 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+#vheader{
+	border:solid 1px black;
+	border-radius: 5px 5px 5px 5px;
+	height:100px;
+	padding-bottom:10px;
+	padding-left:5px;
+	color:yellow;
+	background-color:green;
+}
+#vlista{
+	//border:solid 1px red;
+	height:336px;
+	width:99%;
+	position:relative;
+	margin:auto;
+	overflow: auto;
+	background-color:white;
+}
+#vcolumnas{
+	color:orange;
+	//background-color:orange;
+	width:99%;
+	margin:auto;
+	//border:solid 1px black;
+	height:40px;
+}
+#th_menu{
+	background-color:orange;
+	border:solid 1px black;
+	text-align:left;
+	color:white;
+	height:40px;
+}
+/* 
+---------------------------------------------------------------------------------------
+Estilo de botones pequeños para la busqueda del menu
+---------------------------------------------------------------------------------------
+*/
+.btmenu{
+	border-right:solid 2px white;
+	box-shadow:gray 4px 4px 10px;
+	width:15px;
+	height:15px;
+}
+.btmenu:hover{
+//	box-shadow:yellow 5px 0px 10px;
+	box-shadow:yellow 5px 5px 10px;
+	border-right:solid 2px yellow;
+}
+/* 
+---------------------------------------------------------------------------------------
+Boton de Ayuda de pantallas
+---------------------------------------------------------------------------------------
+*/
+.bthelp{
+	border-radius:50px 50px 50px 50px ;
+	box-shadow:white 5px 5px 10px;
+	margin-right:10px;
+	width:20px;
+	height:20px;
+}
+.bthelp:hover{
+	box-shadow:yellow 5px 5px 10px;
+}		
+/* 
+---------------------------------------------------------------------------------------
+Barra de navegacion y sus botones.
+Botones barra de navegacion principal
+---------------------------------------------------------------------------------------
+*/
+.btbarra{
+	margin:2px;
+	border-bottom:solid 4px white;
+	border-radius:7px 7px 7px 7px;
+}
+.btbarra:hover{
+	border-bottom:solid 4px blue;
+	box-shadow:cyan 5px 5px 15px;
+	color:blue;
+}
+#barra_princ{
+	background:green;
+	top:0px;
+	left:0px;
+	box-shadow:white 0px 10px 10px;
+	border-radius:10px 10px 0px 0px;
+	color:yellow;
+	padding:1px;
+	margin-bottom:5px;
+}
+#barra_princ2{
+	padding:2px;
+	border-bottom:solid 4px white;
+	background-color:#267824; 
+	color:yellow;
+	box-shadow:grey 7px 7px 10px;
+	border-radius:10px 10px 0px 0px;
+}
+.barra_princ2:hover{
+	border-bottom:solid 4px blue;
+	box-shadow:cyan 5px 5px 15px;
+	color:blue;
+}
+/* 
+-----------------------------------------------------
+Pantalla Mensajes de Errores 
+-----------------------------------------------------
+*/
+.getmsgalert{
+	/*background-image:url(../photos/EYE.ico);*/
+	background-color:#dad8d8;
+	width:400px;
+	height:auto;
+	top:30%;
+	left:30%;
+	border:solid 1px red;
+	position:fixed;
+	text-align:center;
+	box-shadow:#f14109 7px 7px 10px;
+	border-radius:10px 10px 10px 10px;
+}
+#msgquit{
+	width:70px;
+	height:50px;
+	margin:10px;
+}
+#msgerror{
+	text-align:center;
+	color:blue;
+}
+#stitle{
+	background:#0404b1;
+	color:yellow;
+	height:30px;
+	border-radius:10px 10px 0px 0px;	
+	text-shadow:aliceblue 5px 5px 5px;
+	padding:9px;
+	text-align:left;
+}
+	

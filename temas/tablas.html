@@ -1,0 +1,65 @@
+<html>
+	
+	<head>
+		<script>
+			
+			function init(){
+			
+			//alert(mama);
+			var obt = document.getElementById("agregar");
+			obt.addEventListener("click",agregar,false);
+			
+			}		
+			function agregar(){
+				var lctrnno = Math.floor(Math.random() * 100000000);		
+				var ot = document.getElementById("tablaprueba");
+				// obteniendo id de linea 
+				var lnrows = ot.rows.length ; 
+
+				var lcInsert = 	'<td>' +
+					'<input id="cservno" class="datainput" type="text"   size="10px" value="'+ lnrows +'" >' +
+					'</td>' +
+					'<td><input id="cdesc"   class="datainput" type="text" readonly  size="35px" ></td>' +
+					'<td><input id="nprice"  class="datainputqty" type="number"  ></td>' +
+					'<td><input id="nqty"    class="datainputqty" type="number"  ></td>' +
+					'<td><input id="namount" class="datainputqty" type="number" readonly ></td>' +
+					'<td><input type="button" value="Eliminar" onclick="eliminarFila(' + lnrows + ')" ></td>';
+ 	
+				document.getElementById("tablaprueba").insertRow(lnrows).innerHTML = lcInsert;	
+			}
+
+			function eliminarFila(pnfila){
+				var table = document.getElementById("tablaprueba");
+				var rowCount = table.rows.length;
+				//console.log(rowCount);
+							
+				if(rowCount <= 1){
+									
+					getmsgalert('No se puede eliminar el encabezado');
+				}else{
+					table.deleteRow(pnfila);
+				}
+			}
+			window.onload=init;
+		</script>
+	</head>
+	
+	<body>
+	<input type="button" value="agregar" id="agregar">
+		<table id="tablaprueba">
+			<thead>
+				<tr>
+					<th>Codigo</th>
+					<th>Descripcion</th>
+					<th>precio</th>
+				</tr>
+			</thead>
+			<tbody>
+			
+			</tbody>
+		</table>
+		
+		
+	</body>
+	
+</html>

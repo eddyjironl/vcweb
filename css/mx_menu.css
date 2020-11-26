@@ -1,0 +1,59 @@
+/*
+efectos de seleccion en la cuadricula
+*/
+.mx_area_bloqueo{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	//transition: opacity 400ms ease-in;
+}
+#form_menu{
+	margin:5% 10%;
+}
+.mx_barra_sencilla{
+    /* formato en verde.*/
+	background:green;
+	color:yellow;
+	box-shadow:white 0px 10px 10px;
+    
+    /* formato en blanco.*/
+	//background:rgb(240,240,240);
+	//color:black;
+	//box-shadow:black 0px 10px 10px;
+
+	top:0px;
+	left:0px;
+	padding:5px;
+	border-radius:10px 10px 0px 0px;
+}
+#mx_detalle tr:hover{
+	color:black;
+	box-shadow:cyan 0px 10px 10px;
+	background-color:orange;
+	cursor:hand;
+}
+#mx_detalle tr {
+	color:blue;
+	cursor:hand;
+}
+.mx_formato_datos{	
+	background-color:#dcdcdc;
+	color:#000000;
+	font-size:11px;
+	font-family:arial;
+}
+.mx_area_encabezado{
+	color:blue;
+	//overflow: auto;
+	margin:auto 10px;
+	text-align:center;
+}
+.mx_area_detalles{
+	height:300px;	
+	color:blue;
+	overflow: auto;
+	margin:auto 10px;
+	text-align:center;
+}

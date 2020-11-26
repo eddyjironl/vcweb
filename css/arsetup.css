@@ -1,0 +1,81 @@
+#arsetup{	
+	width:500px;
+	height:615px;
+	padding:5px;
+}
+fieldset{
+	border:none;
+}
+
+#comentarios{
+	border:none;
+	
+}
+#div_botones{		
+	position:static;
+	margin-top:35%;
+	width:130px;
+	margin-left:35%;
+}
+}
+#lbestado{
+	margin-left:200px;
+	//color:white;
+	//background:orange;
+}
+.lbtitle{
+	color:cyan;
+	background:grey;
+	padding-left:5px;
+	padding-right:5px;
+}
+.tabcontent {
+	height:300px;
+	border:solid 1px black;
+}
+
+
+
+/*
+		<?php
+		// Configurando los valores iniciales de la vistar como en cualquier caso.
+		//--------------------------------------------------------------------------------------------------------------
+			// A)- INCLUD NECESARIOS PARA TODO LO QUE SIGUE bgcolor="#ffffcc"
+			include("../modelo/coneccion.php");
+			include("../modelo/vc_funciones.php");
+			
+			if (Star_session() == 1){
+				return;
+			}
+			//--------------------------------------------------------------------------------------------------------------
+			// B)-CONFIGURANDO EL ENCABEZADO
+			// configurando el ancabezado.
+			//vc_funciones::set_encabezado("CONFIGURACION GENERAL VC2019 WEB");
+			//--------------------------------------------------------------------------------------------------------------
+			$oConn = get_coneccion("CIA");
+			// listado de bodegas
+			//$laarwhse = $oConn->query("select * from arwhse ");	
+			// listado de tipos de requisa
+			//$laarcate = $oConn->query("select * from arcate  ");	
+			//$lcresult = $oConn->query("select * from arsetup where cmodule='C'");	
+			//$ldata = mysqli_fetch_assoc($lcresult);
+
+			// cargando los resultados de lo que encontro
+			$lninvlinmax = $ldata["ninvlinmax"];
+			$lninvno 	= empty($ldata["ninvno"])?0:$ldata["ninvno"];
+			$lnrecno 	= empty($ldata["nrecno"])?0:$ldata["nrecno"];
+			$lnncno 	= empty($ldata["nncno"])?0:$ldata["nncno"];
+			$lnndno 	= empty($ldata["nndno"])?0:$ldata["nndno"];
+			$lnadjno	= empty($ldata["nadjno"])?0:$ldata["nadjno"];
+			$lncotno 	= empty($ldata["ncotno"])?0:$ldata["ncotno"];
+			$lctaxproc 	= $ldata["ctaxproc"];
+			$lccateno	= $ldata["ccateno"];
+			$lcwhseno 	= $ldata["cwhseno"];
+			$llinvno 	= empty($ldata["linvno"])?0:$ldata["linvno"];
+			$llestados 	= empty($ldata["lestados"])?0:$ldata["lestados"];
+			$llcoti 	= empty($ldata["lcoti"])?0:$ldata["lcoti"];
+			$lmcoti 	= $ldata["mcoti"];
+			$lmestados 	= $ldata["mestados"];
+			$lminvno 	= $ldata["minvno"];
+		?>
+*/

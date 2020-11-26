@@ -1,0 +1,37 @@
+#adetalles{
+	height:300px;	
+	overflow: auto;
+	margin-bottom:15px;
+	margin-left:7.5%;
+}
+
+.table_det{	
+	background-color:#dcdcdc;
+	color:#000000;
+	font-size:12px;
+	font-family:arial;
+}
+			
+.sayamtd{
+	font-size:12px;
+	font-family:arial;
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	color:blue;
+	background-color:rgb(240,240,240);
+	text-align:right;
+}
+
+.saytextd{
+	font-size:12px;
+	font-family:arial;
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	color:blue;
+	background-color:rgb(240,240,240);
+	text-align:left;
+}
+
+fieldset{
+	border:none;
+}

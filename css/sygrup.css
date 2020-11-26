@@ -1,0 +1,73 @@
+/*---------------------------------------------------------------------------------------------*/
+/* detalle de la tabla*/
+/*---------------------------------------------------------------------------------------------*/
+.area_detalles{
+	height:300px;	
+	//width:355px;
+	overflow: auto;
+	//margin-left:12%;
+}
+
+.table_det{	
+	background-color:#dcdcdc;
+	color:#000000;
+	font-size:11px;
+	font-family:arial;
+}
+
+.sayamtd{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	color:blue;
+	background-color:rgb(240,240,240);
+	text-align:right;
+}
+
+.saytextd{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	color:blue;
+	background-color:rgb(240,240,240);
+	text-align:left;
+}
+.sayamtd_link{
+	padding:1px;
+	border:solid 1px rgb(240,240,240);
+	color:red;
+	background-color:rgb(240,240,240);
+	text-align:right;
+}
+
+/*
+---------------------------------------------------------------- 
+subpantalla 
+----------------------------------------------------------------
+*/
+.area_bloqueo{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	//transition: opacity 400ms ease-in;
+}
+
+#syuser, #syperm{
+	border:solid 3px gray;
+	width:fit-content;
+	height:fit-content;
+	margin:5% 10%;
+}
+
+.barra_sencilla{
+	background:green;
+	top:0px;
+	left:0px;
+	box-shadow:white 0px 10px 10px;
+	color:yellow;
+	text-align:center;
+	padding:1px;
+	margin-bottom:5px;
+	border-radius:10px 10px 0px 0px;
+}
+

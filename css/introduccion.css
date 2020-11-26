@@ -1,0 +1,43 @@
+.star_dv{
+	border:solid gray 1px;
+	border-radius:5px 5px 5px 5px;
+	padding:10px;
+	background:#21215d;
+	box-shadow:cyan 5px 5px 10px;
+	margin-bottom:20px;
+}
+#sitio{
+	color:white;	
+}
+.instructions{
+	color:white;
+}
+
+.instructions p{
+	color:white;
+	font-size:16px;
+}
+
+H1{
+	color:yellow;
+	text-align:center;
+	margin:center;
+	font-size:20px;
+}
+.informacion{
+	box-shadow:black 5px 5px 10px;
+	border-radius:5px 5px 5px 5px;
+	display:inline-block;
+	float:left;
+	position:absolute;
+	margin-top:20%;
+	padding:10px;
+	left:15%;
+	border:solid 1px gray;
+	background-color:gray;
+
+}
+#btok{
+	margin-top:20px;
+	padding:5px;
+}

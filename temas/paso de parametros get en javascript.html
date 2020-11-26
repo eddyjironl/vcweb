@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <script>
+    /**
+     * Funcion que captura las variables pasados por GET
+     * http://www.lawebdelprogramador.com/pagina.html?id=10&pos=3
+     * Devuelve un array de clave=>valor
+     */
+    function getGET()
+    {
+        // capturamos la url
+        var loc = document.location.href;
+        // si existe el interrogante
+        if(loc.indexOf('?')>0)
+        {
+            // cogemos la parte de la url que hay despues del interrogante
+            var getString = loc.split('?')[1];
+            // obtenemos un array con cada clave=valor
+            var GET = getString.split('&');
+            var get = {};
+ 
+            // recorremos todo el array de valores
+            for(var i = 0, l = GET.length; i < l; i++){
+                var tmp = GET[i].split('=');
+                get[tmp[0]] = unescape(decodeURI(tmp[1]));
+            }
+            return get;
+        }
+    }
+ 
+    window.onload = function()
+    {
+        // Cogemos los valores pasados por get
+        var valores=getGET();
+        if(valores)
+        {
+            // hacemos un bucle para pasar por cada indice del array de valores
+            for(var index in valores)
+            {
+                document.write("<br>clave: "+index+" - valor: "+valores[index]);
+            }
+        }else{
+            // no se ha recibido ningun parametro por GET
+            document.write("<br>No se ha recibido ningún parámetro");
+        }
+    }
+    </script>
+</head>
+ 
+<body>
+ 
+</body>
+</html>
+
+
+Esta otra función nos puede ser igualmente útil. Simplemente hay que indicarle por el argumento el id del parámetro que queremos obtener, eso si, de la URL actual. Aunque no debería suponernos ningún problema modificarla para que realizase la búsqueda en cualquier URL que quisieramos analizar en lugar de solamente la URL actual.
+
+// Obtiene el parametro GET con el id pasado
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&amp;amp;]" + name + "=([^&amp;amp;#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+
+//OTRA FORMA
+//---------------------------------------------------------------------------------------------------
+mplo lo único que tenemos que cambiar son los índices según deseemos y utilizar las variables como nos plazca, de hecho podemos verlo en funcionamiento de forma completa para la siguiente url:
+
+recibir.html?nombre=Miguel&edad=37
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ 
+    /**
+    * Funcion que captura las variables pasados por GET
+    * Devuelve un array de clave=>valor
+    */
+    function getGET()
+    {
+        // capturamos la url
+        var loc = document.location.href;
+        // si existe el interrogante
+        if(loc.indexOf('?')>0)
+        {
+            // cogemos la parte de la url que hay despues del interrogante
+            var getString = loc.split('?')[1];
+            // obtenemos un array con cada clave=valor
+            var GET = getString.split('&');
+            var get = {};
+            // recorremos todo el array de valores
+            for(var i = 0, l = GET.length; i < l; i++){
+                var tmp = GET[i].split('=');
+                get[tmp[0]] = unescape(decodeURI(tmp[1]));
+            }
+            return get;
+        }
+    }
+    window.onload = function()
+    {
+        // Cogemos los valores pasados por get
+        var valores=getGET();
+        if(valores)
+        {
+            //recogemos los valores que nos envia la URL en variables para trabajar 
+                //con ellas
+            var nombre = valores['nombre'];
+            var edad = valores['edad'];
+                // hacemos un bucle para pasar por cada indice del array de valores
+            for(var index in valores)
+            {
+                document.write(" clave: "+index+" - valor: "+valores[index]);
+            }
+            document.write('
+<hr>
+ 
+ Te llamas '+ nombre);
+            document.write(' Tu edad es '+ edad);
+        }else{
+            // no se ha recibido ningun parametro por GET
+            document.write("No se ha recibido ningún parámetro");
+        }
+    }
+    </script>
+</body>
+</html>
